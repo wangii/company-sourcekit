@@ -106,7 +106,7 @@ It never actually gets sent to the completion engine."
             (company-sourcekit--make-sentinel callback)
             "-H" (format "X-Offset: %d" offset)
             "-H" (format "X-Path: %s" tmpfile)
-            "-H" (format "X-File: %s" (file-name-non-directory (buffer-file-name)))))))))
+            "-H" (format "X-File: %s" (file-name-nondirectory (buffer-file-name)))))))))
 
 (defun company-sourcekit--make-sentinel (callback)
   "The handler for process output."
